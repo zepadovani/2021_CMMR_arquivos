@@ -7,6 +7,7 @@ figure, axis = plt.subplots(3, 3)
 #chicote, tomtom, gong, tapa pandeiro, drag, guiro, jeté no berimbau, chocalho, chapa metálica 
 arrFileNames30 = ['whip30.txt', 'tomtom30.txt', 'gong.tuned30.txt', 'tamb.slap30.txt', 'sdrum.drag30.txt', 'guiro30.txt', 'berimb.jete30.txt', 'rattle30.txt', 'thunder.shake30.txt']
 arrFileNames4 = ['whip4.txt', 'tomtom4.txt', 'gong.tuned4.txt', 'tamb.slap4.txt', 'sdrum.drag4.txt', 'guiro4.txt', 'berimb.jete4.txt', 'rattle4.txt', 'thunder.shake4.txt']
+arrGraphNames = ['whip', 'tomtom', 'gong.tuned', 'tamb.slap', 'sdrum.drag', 'guiro', 'berimb.jete', 'rattle', 'thunder.shake']
 
 Xs = []
 Ys = []
@@ -70,7 +71,7 @@ for f in range(0, num_files):
             cur_line = cur_line + 1
         
         axis[line, column].plot(X, Y, 'tab:blue')
-        #axis[line, column].set_title(arrFileNames30[f])
+        axis[line, column].set_title(arrGraphNames[f])
 
 line = 0
 column = 0
