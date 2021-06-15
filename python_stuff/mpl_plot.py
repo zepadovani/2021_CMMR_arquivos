@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 num_files = 9;
-figure, axis = plt.subplots(3, 3)
+figure, axis = plt.subplots(3, 3, figsize=(4.80315 * 2.3, 2.440945 * 2.3))
 #chicote, tomtom, gong, tapa pandeiro, drag, guiro, jeté no berimbau, chocalho, chapa metálica 
 arrFileNames30 = ['whip30.txt', 'tomtom30.txt', 'gong.tuned30.txt', 'tamb.slap30.txt', 'sdrum.drag30.txt', 'guiro30.txt', 'berimb.jete30.txt', 'rattle30.txt', 'thunder.shake30.txt']
 arrFileNames4 = ['whip4.txt', 'tomtom4.txt', 'gong.tuned4.txt', 'tamb.slap4.txt', 'sdrum.drag4.txt', 'guiro4.txt', 'berimb.jete4.txt', 'rattle4.txt', 'thunder.shake4.txt']
@@ -91,5 +91,5 @@ for i in range(0, num_files):
     axis[line, column].set_ylim([-1 * minNum, 0])
     if(onsets[i] != -1):
         axis[line, column].axvline(onsets[i], 1, 0, color='red')
-    
+
 plt.show()
